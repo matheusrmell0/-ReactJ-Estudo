@@ -1,7 +1,9 @@
 import React from 'react';
-import HeaderP from './Pagina Pratica/HeaderP';
-import HomeP from './Pagina Pratica/HomeP';
-import ProdutosP from './Pagina Pratica/ProdutosP';
+import ButtonModal from './useState/ButtonModal';
+import Modal from './useState/Modal';
+// import HeaderP from './Pagina Pratica/HeaderP';
+// import HomeP from './Pagina Pratica/HomeP';
+// import ProdutosP from './Pagina Pratica/ProdutosP';
 
 // import React, { Fragment } from 'react';
 
@@ -323,20 +325,82 @@ import ProdutosP from './Pagina Pratica/ProdutosP';
 //   );
 // };
 
+// const App = () => {
+//   let Pagina;
+//   const { pathname } = window.location;
+//   if (pathname === '/produtos') {
+//     Pagina = ProdutosP
+//   } else {
+//     Pagina = HomeP
+//   }
+
+//   return (
+//     <>
+//       <HeaderP />
+//       <Pagina />
+//     </>
+//   );
+// };
+
+// const App = () => {
+//   let ativo = true;
+//   const handleClick = () => {
+//     ativo = (!ativo)
+//   }
+//   return (
+//     <div>
+//       <button onClick={handleClick} disabled={!ativo}>{ativo ? 'Ativo' : 'Inativo'}</button>
+//     </div>
+//   )
+// }
+//
+
+// const App = () => {
+//   const ativoHook = React.useState(false);
+//   const ativoValor = ativoHook[0];
+//   const atualizaValor = ativoHook[1];
+
+//   console.log(ativoHook);
+//   const handleClick = () => {
+//     atualizaValor(!ativoValor);
+//   };
+//   return (
+//     <div>
+//       <button onClick={handleClick}>{ativoValor ? 'Ativo' : 'Inativo'}</button>
+//     </div>
+//   );
+// };
+// //
+
+// const App = () => {
+//   const [ativo, setAtivo] = React.useState(false);
+//   const [dados, setDados] = React.useState({ nome: 'Matheus', idade: '24' });
+
+//   const handleClick = () => {
+//     setAtivo(!ativo);
+//     setDados({ ...dados, profissao: 'Eng' });
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={handleClick}>{ativo ? 'Ativo' : 'Inativo'}</button>
+//       <p>{dados.nome}</p>
+//       <p>{dados.idade}</p>
+//       {ativo ? <p>{dados.profissao}</p> : null}
+//     </div>
+//   );
+// };
+// //
+
 const App = () => {
-  let Pagina;
-  const { pathname } = window.location;
-  if (pathname === '/produtos') {
-    Pagina = ProdutosP
-  } else {
-    Pagina = HomeP
-  }
+  const [modal, setModal] = React.useState(false);
 
   return (
-    <>
-      <HeaderP />
-      <Pagina />
-    </>
+    <div>
+
+      <Modal modal={modal} setModal={setModal} />
+      <ButtonModal Modal={setModal} />
+    </div>
   );
 };
 
