@@ -1,4 +1,9 @@
 import React from 'react';
+import HeaderP from './Pagina Pratica/HeaderP';
+import HomeP from './Pagina Pratica/HomeP';
+import ProdutosP from './Pagina Pratica/ProdutosP';
+
+// import React, { Fragment } from 'react';
 
 // const App = () => {
 //   const nome = 'Matheus';
@@ -168,48 +173,170 @@ import React from 'react';
 //
 //
 
-// Organize os produtos como mostrado no vídeo
 // Mostre apenas produtos que forem mais caros que R$ 1500
-const produtos = [
-  {
-    id: 1,
-    nome: 'Smartphone',
-    preco: 'R$ 2000',
-    cores: ['#29d8d5', '#252a34', '#fc3766'],
-  },
-  {
-    id: 2,
-    nome: 'Notebook',
-    preco: 'R$ 3000',
-    cores: ['#ffd045', '#d4394b', '#f37c59'],
-  },
-  {
-    id: 3,
-    nome: 'Tablet',
-    preco: 'R$ 1500',
-    cores: ['#365069', '#47c1c8', '#f95786'],
-  },
-];
+// const produtos = [
+//   {
+//     id: 1,
+//     nome: 'Smartphone',
+//     preco: 'R$ 2000',
+//     cores: ['#29d8d5', '#252a34', '#fc3766'],
+//   },
+//   {
+//     id: 2,
+//     nome: 'Notebook',
+//     preco: 'R$ 3000',
+//     cores: ['#ffd045', '#d4394b', '#f37c59'],
+//   },
+//   {
+//     id: 3,
+//     nome: 'Tablet',
+//     preco: 'R$ 1500',
+//     cores: ['#365069', '#47c1c8', '#f95786'],
+//   },
+// ];
+
+// const App = () => {
+//   return (
+//     <section>
+//       {produtos
+//         .filter(({ preco }) => Number(preco.replace('R$ ', '')) > 1500)
+//         .map(({ id, nome, preco, cores }) => (
+//           <div key={id}>
+//             <h1>{nome}</h1>
+//             <p>{preco}</p>
+//             <ul>
+//               {cores.map((cor) => (
+//                 <li key={cor} style={{ backgroundColor: cor, color: '#fff' }}>
+//                   {cor}
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+//         ))}
+//     </section>
+//   );
+// };
+
+// const App = () => {
+//   const handleClick = (event) => {
+//     console.log(event);
+//   };
+//   return (
+//     <div>
+//       <button onClick={handleClick} onMouseMove={(event) => {console.log(event.target)}}>Click</button>
+//     </div>
+//   );
+// };
+
+// const App = () => {
+//   const scroll = (event) => {
+//     console.log(event);
+//   };
+//   window.addEventListener('scroll', scroll);
+//   return (
+//     <div style={{ height: '200vh' }}>
+//       <button>Ola</button>
+//     </div>
+//   );
+// };
+//
+
+//
+// import Header from './Header';
+// import Footer from './Footer';
+// import Form from './Form/Form';
+
+// const Test = () => {
+//   const active = false;
+//   if (active) {
+//     return <p>Teste</p>;
+//   } else {
+//     return null;
+//   }
+// };
+
+// const App = () => {
+//   return (
+//     <React.Fragment>
+//       <Test />
+//       <Header />
+//       <Form />
+//       <Footer />
+//     </React.Fragment>
+//   );
+// };
+//
+
+// //
+// const Grid = ({ cor, children, grid, size }) => {
+//   return (
+//     <div style={{ color: cor, display: grid, fontSize: size }}>{children}</div>
+//   );
+// };
+// const Titulo = ({ cor, texto, children }) => {
+//   return (
+//     <h1 style={{ color: cor }}>
+//       {texto} {children}
+//     </h1>
+//   );
+// };
+
+// const App = () => {
+//   return (
+//     <>
+//       <div>
+//         <Titulo cor="red" texto="Meu titulo 1" />
+//         <Titulo>
+//           <p>Isso é o children</p>
+//         </Titulo>
+//         <Titulo cor="blue" texto="Meu titulo 2" />
+//         <Grid cor="gray" grid="grid" size="3rem">
+//           <p>Isso é o children</p>
+//         </Grid>
+//         <Form />
+//       </div>
+//     </>
+//   );
+// };
+// //
+
+// const App = () => {
+//   let Pagina;
+//   const { pathname } = window.location;
+//   if (pathname === '/produtos') {
+//     Pagina = DesaftioProdutos;
+//   } else {
+//     Pagina = DesafioHome;
+//   }
+//   return (
+//     <>
+//       <DesafioHeader grid="grid" cor="blue">
+//         <li>
+//           <a href="/">Home</a>
+//         </li>
+//         <li>
+//           <a href="/produtos">Produtos</a>
+//         </li>
+//       </DesafioHeader>
+//       <Pagina size="2rem" cor="green" />
+//     </>
+//   );
+// };
 
 const App = () => {
+  let Pagina;
+  const { pathname } = window.location;
+  if (pathname === '/produtos') {
+    Pagina = ProdutosP
+  } else {
+    Pagina = HomeP
+  }
+
   return (
-    <section>
-      {produtos
-        .filter(({ preco }) => Number(preco.replace('R$ ', '')) > 1500)
-        .map(({ id, nome, preco, cores }) => (
-          <div key={id}>
-            <h1>{nome}</h1>
-            <p>{preco}</p>
-            <ul>
-              {cores.map((cor) => (
-                <li key={cor} style={{ backgroundColor: cor, color: '#fff' }}>
-                  {cor}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-    </section>
+    <>
+      <HeaderP />
+      <Pagina />
+    </>
   );
 };
 
