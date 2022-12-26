@@ -1,6 +1,15 @@
 import React from 'react';
-import ButtonModal from './useState/ButtonModal';
-import Modal from './useState/Modal';
+
+// import UseRef from './useRef/UseRef';
+// import ProdutoEffect from './useEffect/ProdutoEffect';
+// import ProdutoE from './useEffect/ProdutoE';
+// import Modal from './useEffect/Modal';
+// import DesafioDots from './useState/DesafioDots';
+// import './useState/Style.css';
+// import Produto from './useState/Produto';
+// import ButtonModal from './useState/ButtonModal';
+// import Modal from './useState/Modal';
+// import Teste from './useState/Teste';
 // import HeaderP from './Pagina Pratica/HeaderP';
 // import HomeP from './Pagina Pratica/HomeP';
 // import ProdutosP from './Pagina Pratica/ProdutosP';
@@ -392,16 +401,353 @@ import Modal from './useState/Modal';
 // };
 // //
 
-const App = () => {
-  const [modal, setModal] = React.useState(false);
+// const App = () => {
+//   const [modal, setModal] = React.useState(false);
+//   const TesteShow = (retorno, test) => {
+//     return retorno + test;
+//   };
+//   const [items, setItems] = React.useState('Item');
 
+//   function handleClick() {
+//     setItems('Outro')
+//   }
+
+//   return (
+//     <div>
+//       <button onClick={handleClick}>Clicar</button>
+//       <p>{items}</p>
+//       <Teste Test={TesteShow} />
+//       <Modal modal={modal} setModal={setModal} />
+//       <ButtonModal Modal={setModal} />
+//     </div>
+//   );
+// };
+
+// const App = () => {
+// const [contar, setContar] = React.useState(1)
+// const [items, setItems] = React.useState(['Item 1'])
+
+// function handleClick() {
+//   setContar(contar => contar + 1);
+//   setItems((items) => [...items, `Item ${contar + 1}`])
+// }
+
+//   return (
+//     <div>
+//       {items.map((item) => (
+//         <li key={item}>{item}</li>
+//       ))}
+//       <button onClick={handleClick} >{contar}</button>
+//     </div>
+//   );
+// };
+
+// https://ranekapi.origamid.dev/json/api/produto/tablet
+// https://ranekapi.origamid.dev/json/api/produto/smartphone
+// https://ranekapi.origamid.dev/json/api/produto/notebook
+
+// const App = () => {
+//   const [dados, setDados] = React.useState(null);
+//   const [loading, setLoading] = React.useState(null);
+
+//   async function handleClick(event) {
+//     setLoading(true)
+//     const reponse = await fetch(
+//       `https://ranekapi.origamid.dev/json/api/produto/${event.target.innerText.toLowerCase()}`,
+//     );
+//     const reponseJson = await reponse.json();
+//     setDados(reponseJson);
+//     setLoading(false);
+//   }
+
+//   return (
+//     <>
+//       <div>
+//         <header style={{ display: 'flex', gap: '15px' }}>
+//           <button onClick={handleClick}>Notebook</button>
+//           <button onClick={handleClick}>Smartphone</button>
+//           <button onClick={handleClick}>Tablet</button>
+//         </header>
+//         <div>
+//           {loading && <p>Carregando...</p>}
+//           {!loading && dados && <Produto dados={dados} />}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// const App = () => {
+//   const [list, setList] = React.useState([]);
+//   const [undid, setUndid] = React.useState([]);
+
+//   const handleClick = ({ clientX, clientY }) => {
+//     const newDot = {
+//       clientX,
+//       clientY,
+//     };
+//     setList((prev) => [...prev, newDot]);
+//     setUndid([])
+//   };
+
+//   const handleUndo = (event) => {
+//     event.stopPropagation();
+
+//     if (list.length === 0) return;
+
+//     const lastItem = list[list.length - 1];
+//     setUndid((prev) => [...prev, lastItem])
+
+//     setList(prev => [...prev].slice(0, -1));
+//   };
+
+//   const handleRedo = (event) => {
+//     event.stopPropagation();
+
+//     if (undid.length === 0) return;
+
+//     const recoveredDot = undid[undid.length - 1];
+//     setList((prev) => [...prev, recoveredDot])
+
+//     setUndid(prev => [...prev].slice(0, -1));
+//   };
+
+//   return (
+//     <div id="page" onClick={handleClick}>
+//       <div style={{ display: 'flex', gap: '20px', margin: '0 auto' }}>
+//         <button onClick={handleUndo}>Desfazer</button>
+//         <button onClick={handleRedo}>Refazer</button>
+//       </div>
+//       {list.map((item, index) => (
+//         <span
+//           key={`${item}${index}`}
+//           className="dot"
+//           style={{ left: item.clientX, top: item.clientY }}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+//
+
+// const App = () => {
+//   const [contar, setContar] = React.useState(0);
+//   const [dados, setDados] = React.useState(null);
+
+//   React.useEffect(() => {
+//     console.log('Executou');
+//   }, []);
+
+//   React.useEffect(() => {
+//     document.title = `Total ${contar}`;
+//   }, [contar]);
+
+//   React.useEffect(() => {
+//     fetch('https://ranekapi.origamid.dev/json/api/produto/notebook')
+//       .then((response) => response.json())
+//       .then((rJson) => setDados(rJson));
+//   }, []);
+
+//   return (
+//     <div>
+//       <button onClick={() => setContar(contar + 1)}>{contar}</button>
+//       {dados && <div>
+//         <h1>{dados.nome}</h1>
+//         <p>R$ {dados.preco * contar}</p>
+//       </div>}
+//     </div>
+//   );
+// };
+//
+
+// const App = () => {
+// const [ativo, setAtivo] = React.useState(false)
+
+//   return (
+//   <div>
+//     {ativo && <Modal/>}
+//     <button onClick={() => setAtivo(!ativo)}>Toogle Modal</button>
+//   </div>
+//   );
+// };
+
+// const App = () => {
+//   const [list, setList] = React.useState(null);
+//   const produtoStorage = localStorage.getItem('produto');
+
+//   if (produtoStorage) {
+//     fecthApi(produtoStorage);
+//   }
+
+//   function handleClick({ target }) {
+//     localStorage.setItem('produto', target.innerText.toLowerCase());
+//     fecthApi(target.innerText.toLowerCase());
+//   }
+
+//   async function fecthApi(url) {
+//     const produtoObj = await fetch(
+//       `https://ranekapi.origamid.dev/json/api/produto/${url}`,
+//     );
+//     const produtoJson = await produtoObj.json();
+//     setList(produtoJson);
+//   }
+
+//   return (
+//     <>
+//       <h1>
+//         Preferência: {(list && list.nome) || localStorage.getItem('produto')}
+//       </h1>
+//       <div style={{ display: 'flex', gap: '15px' }}>
+//         <button onClick={handleClick}>Notebook</button>
+//         <button onClick={handleClick}>Smartphone</button>
+//       </div>
+//       {list && (
+//         <div>
+//           <ProdutoE list={list} />
+//         </div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default App;
+
+// const App = () => {
+//   const [list, setList] = React.useState(null);
+
+//   async function handleClick({ target }) {
+//     localStorage.setItem('produto', target.innerText)
+//     const produtoStorage = localStorage.getItem('produto')
+//     const produtoObj = await fetch(
+//       `https://ranekapi.origamid.dev/json/api/produto/${produtoStorage}`,
+//     );
+//     const produtoJson = await produtoObj.json();
+//     setList(produtoJson);
+//   }
+
+//   return (
+//     <>
+//       <h1>Preferência: {(list && list.nome) || localStorage.getItem('produto')}</h1>
+//       <div style={{ display: 'flex', gap: '15px' }}>
+//         <button onClick={handleClick}>Notebook</button>
+//         <button onClick={handleClick}>Smartphone</button>
+//       </div>
+//       {list && (
+//         <div>
+//           <ProdutoE list={list}/>
+//         </div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default App;
+
+// const App = () => {
+//   const [produto, setProduto] = React.useState(null);
+
+//   React.useEffect(() => {
+//     if (produto !== null) localStorage.setItem('produto', produto);
+//   }, [produto]);
+
+//   React.useEffect(() => {
+//     const produtoName = localStorage.getItem('produto');
+//     if (produtoName !== null) setProduto(produtoName);
+//   }, []);
+
+//   function handleClick({ target }) {
+//     setProduto(target.innerText);
+//   }
+
+//   return (
+//     <>
+//       <h1>Preferência: {produto}</h1>
+//       <div style={{ display: 'flex', gap: '20px' }}>
+//         <button onClick={handleClick}>Notebook</button>
+//         <button onClick={handleClick}>Smartphone</button>
+//       </div>
+//       <ProdutoEffect produto={produto}/>
+//     </>
+//   );
+// };
+//
+
+// function operacaoLenta() {
+//   let c;
+//   for(let i = 0; i < 1000000000; i ++){
+//     c = i + i /1000
+//   }
+//   return c
+// }
+
+// const App = () => {
+//   const [contar, setContar] = React.useState(0);
+
+//   // localStorage.setItem('item1', 'Produto 1');
+//   // const valor = React.useMemo(() => {
+//   //   console.log('Memo teste');
+//   //   return localStorage.getItem('item1');
+//   // }, []);
+ 
+//   const t1 = performance.now();
+//   const valor = React.useMemo(() => operacaoLenta(), [])
+//   console.log(valor)
+//   console.log(performance.now() - t1)
+
+//   return (
+//     <>
+//       <div>
+//         <button onClick={() => setContar(contar + 1)}>{contar}</button>
+//       </div>
+//     </>
+//   );
+// };
+// 
+
+// const set1 = new Set();
+// const set2 = new Set();
+
+// const Produto = () => {
+//   const func1 = () => {
+//     console.log('Teste');
+//   };
+
+//   const func2 = React.useCallback(() => {
+//     console.log('Teste');
+//   }, []);
+
+//   set1.add(func1);
+//   set2.add(func2);
+
+//   console.log('Set1:', set1);
+//   console.log('Set2:', set2);
+//   return (
+//     <div>
+//       <p onClick={func1}>Produto 1</p>
+//       <p onClick={func2}>Produto 2</p>
+//     </div>
+//   );
+// };
+
+// const App = () => {
+//   const [contar, setContar] = React.useState(0);
+
+//   return (
+//     <div>
+//       <Produto />
+//       <button onClick={() => setContar(contar + 1)}>{contar}</button>
+//     </div>
+//   );
+// };
+
+const App = () =>{
   return (
+    <>
     <div>
-
-      <Modal modal={modal} setModal={setModal} />
-      <ButtonModal Modal={setModal} />
+      Bom dia
     </div>
-  );
-};
+    </>
+  )
+}
 
 export default App;

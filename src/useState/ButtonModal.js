@@ -1,8 +1,11 @@
 import React from 'react'
 
-const ButtonModal = ({ Modal }) => {
+const ButtonModal = ( {Modal} ) => {
+  function handleClick(){
+    Modal((ativo) => !ativo)
+  }
   return (
-    <button onClick={() => Modal(true)}>Abrir</button>
+    <button onClick={handleClick}>Abrir</button>
   )
 }
 
