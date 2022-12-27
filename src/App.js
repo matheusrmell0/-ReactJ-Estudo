@@ -1,5 +1,10 @@
 import React from 'react';
+import PreferenciaUser from './userHooks/PreferenciaUser';
 
+// import { Storage } from './createContext/DesafioUseContext';
+// import LimparProdutos from './createContext/LimparProdutos';
+// import UseContextDesafio from './createContext/UseContextDesafio';
+// import ProdutoContext from './createContext/ProdutoContext';
 // import UseRef from './useRef/UseRef';
 // import ProdutoEffect from './useEffect/ProdutoEffect';
 // import ProdutoE from './useEffect/ProdutoE';
@@ -688,7 +693,7 @@ import React from 'react';
 //   //   console.log('Memo teste');
 //   //   return localStorage.getItem('item1');
 //   // }, []);
- 
+
 //   const t1 = performance.now();
 //   const valor = React.useMemo(() => operacaoLenta(), [])
 //   console.log(valor)
@@ -702,7 +707,7 @@ import React from 'react';
 //     </>
 //   );
 // };
-// 
+//
 
 // const set1 = new Set();
 // const set2 = new Set();
@@ -740,12 +745,37 @@ import React from 'react';
 //   );
 // };
 
-const App = () =>{
+//
+// import { GlobalStorage } from './createContext/UserContext';
+
+// const App = () => {
+//   return (
+//     <>
+//       <GlobalStorage>
+//         <ProdutoContext />
+//       </GlobalStorage>
+//     </>
+//   );
+// };
+
+// const App = () => {
+//   return (
+//     <>
+//       <div>
+//         <Storage>
+//           <UseContextDesafio />
+//           <LimparProdutos/>
+//         </Storage>
+//       </div>
+//     </>
+//   );
+// };
+// 
+
+const App = () => {
   return (
     <>
-    <div>
-      Bom dia
-    </div>
+    <PreferenciaUser/>
     </>
   )
 }
