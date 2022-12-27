@@ -1,6 +1,7 @@
 import React from 'react';
-import PreferenciaUser from './userHooks/PreferenciaUser';
+import UserFetch from './Teste UserHooks/UserFetch';
 
+// import PreferenciaUser from './Teste UserHooks/PreferenciaUser';
 // import { Storage } from './createContext/DesafioUseContext';
 // import LimparProdutos from './createContext/LimparProdutos';
 // import UseContextDesafio from './createContext/UseContextDesafio';
@@ -770,14 +771,14 @@ import PreferenciaUser from './userHooks/PreferenciaUser';
 //     </>
 //   );
 // };
-// 
+//
 
 const App = () => {
   return (
     <>
-    <PreferenciaUser/>
+      <UserFetch/>
     </>
-  )
-}
+  );
+};
 
 export default App;

@@ -1,5 +1,5 @@
 import React from 'react';
-import useLocalStorage from './useLocalStorage';
+import useLocalStorage from '../userHooks/useLocalStorage';
 
 const PreferenciaUser = () => {
   const [produto, setProduto] = useLocalStorage('produto', '');
@@ -12,7 +12,12 @@ const PreferenciaUser = () => {
     <div>
       <h1>Produto preferido é: {produto}</h1>
       <button onClick={handleClick}>Notebook</button>
-      <button style={{display: 'block', marginTop: '10px'}} onClick={handleClick}>Tablet</button>
+      <button
+        style={{ display: 'block', marginTop: '10px' }}
+        onClick={handleClick}
+      >
+        Tablet
+      </button>
     </div>
   );
 };
