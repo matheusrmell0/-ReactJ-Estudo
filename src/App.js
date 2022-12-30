@@ -1,5 +1,6 @@
 import React from 'react';
 
+// import { Validacao } from './Desafio Pratica/Validacao';
 // import Colors from './Desafio Pratica/Colors';
 // import Checkbox from './Componentes/Formulario/Checkbox';
 // import Radio from './Componentes/Formulario/Radio';
@@ -983,10 +984,104 @@ import React from 'react';
 //   );
 // };
 
+// import Input from './Componentes/Formulario/Input';
+// import useForm from './userHooks/useForm';
+
+// const App = () => {
+//   const [dados, setDados] = React.useState([]);
+
+//   const nome = useForm();
+//   const sobrenome = useForm(false);
+//   const cep = useForm('cep');
+//   const email = useForm('email');
+//   const password = useForm('password');
+
+//   function handleSubmit(event) {
+//     event.preventDefault();
+//     if (
+//       cep.validate() &&
+//       email.validate() &&
+//       nome.validate() &&
+//       password.validate()
+//     ) {
+//       alert('Formulário enviado');
+//       setDados([
+//         ...dados,
+//         {
+//           nome: nome.value,
+//           sobrenome: sobrenome.value,
+//           cep: cep.value,
+//           email: email.value,
+//           senha: password.value,
+//         },
+//       ]);
+//     } else {
+//       alert('Erro no envio');
+//     }
+//   }
+
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <Input label="Nome" id="nome" type="text" {...nome} />
+//       <Input
+//         value={sobrenome.value}
+//         label="Sobrenome"
+//         id="sobrenome"
+//         type="text"
+//         {...sobrenome}
+//       />
+//       <Input
+//         value={cep.value}
+//         label="CEP"
+//         id="cep"
+//         type="text"
+//         placeholder="00000-000"
+//         {...cep}
+//       />
+//       <Input
+//         label="Email"
+//         value={email.value}
+//         type="email"
+//         required
+//         id="email"
+//         {...email}
+//       />
+//       <Input
+//         {...password}
+//         value={password.value}
+//         label="Senha"
+//         id="senha"
+//         type="password"
+//       />
+//       <button>Enviar</button>
+//     </form>
+//   );
+// };
+//
+//
+
+import Quest1 from './Desafio Formulario/Quest1';
+import Quest2 from './Desafio Formulario/Quest2';
+import Quest3 from './Desafio Formulario/Quest3';
+import Quest4 from './Desafio Formulario/Quest4';
+import { ResultStorage } from './Desafio Formulario/FormContext';
+import Resposta from './Desafio Formulario/Resposta';
+
 const App = () => {
+  let Pagina = Quest1;
+  const { pathname } = window.location;
+
+  if (pathname === '/p2') Pagina = Quest2;
+  else if (pathname === '/p3') Pagina = Quest3;
+  else if (pathname === '/p4') Pagina = Quest4;
+  else if (pathname === '/resposta') Pagina = Resposta
+  else Pagina = Quest1;
+
   return (
     <>
-      <div>Coe</div>
+      <ResultStorage>
+        <Pagina />
+      </ResultStorage>
     </>
   );
 };
