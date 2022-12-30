@@ -1,6 +1,13 @@
 import React from 'react';
-import UserFetch from './Teste UserHooks/UserFetch';
 
+// import Colors from './Desafio Pratica/Colors';
+// import Checkbox from './Componentes/Formulario/Checkbox';
+// import Radio from './Componentes/Formulario/Radio';
+// import Select from './Componentes/Formulario/Select';
+// import Input from './Componentes/Formulario/Input';
+// import FormOtimiza from './Form React Pratica/FormOtimiza';
+// import FormReact from './Form React Pratica/FormReact';
+// import UserFetch from './Teste UserHooks/UserFetch';
 // import PreferenciaUser from './Teste UserHooks/PreferenciaUser';
 // import { Storage } from './createContext/DesafioUseContext';
 // import LimparProdutos from './createContext/LimparProdutos';
@@ -773,10 +780,213 @@ import UserFetch from './Teste UserHooks/UserFetch';
 // };
 //
 
+// const App = () => {
+//   return (
+//     <>
+//       <UserFetch/>
+//     </>
+//   );
+// };
+
+// const App = () => {
+//   return (
+//     <>
+//       <FormReact />
+//     </>
+//   );
+// };
+
+// const App = () => {
+//   const [textarea, setTextarea] = React.useState('');
+
+//   return (
+//     <>
+//       <div style={{ width: '500px' }}>
+//         <textarea
+//           onChange={({ target }) => {
+//             setTextarea(target.value);
+//           }}
+//           value={textarea}
+//         />
+//         <p>{textarea}</p>
+//       </div>
+//     </>
+//   );
+// };
+
+// const App = () => {
+//   const [select, setSelect] = React.useState('');
+
+//   return (
+//     <>
+//       <div>
+//         <form>
+//           <select
+//             value={select}
+//             onChange={({ target }) => setSelect(target.value.toLocaleUpperCase())}
+//           >
+//             <option disabled value="">Selecione</option>
+//             <option value="nootbook">Nootbook</option>
+//             <option value="smarthphone">Smarthphone</option>
+//             <option value="tablet">Tablet</option>
+//           </select>
+//           <p>{select}</p>
+//         </form>
+//       </div>
+//     </>
+//   );
+// };
+
+// const App = () => {
+//   const [target, setTarget] = React.useState('');
+
+//   return (
+//     <>
+//       <div>
+//         <form>
+//           <label>
+//             <input
+//               onChange={({ target }) => setTarget(target.value)}
+//               checked={target === 'Smartphone'}
+//               value="Smartphone"
+//               type="radio"
+//             />
+//             Smartphone
+//           </label>
+//           <label>
+//             <input
+//               onChange={({ target }) => setTarget(target.value)}
+//               checked={target === 'Notebook'}
+//               value="Notebook"
+//               type="radio"
+//             />
+//             Notebook
+//           </label>
+//         </form>
+//         <p>Você selecionou: {target}</p>
+//       </div>
+//     </>
+//   );
+// };
+
+// const App = () => {
+// const [termos, setTermos] = React.useState(false)
+
+//   return (
+//     <div>
+//       <label>
+//         <input
+//         value='termos'
+//         checked={termos}
+//         onChange={({target}) => setTermos(target.checked)}
+//         type="checkbox"
+//         />
+//         Aceito os termos
+//       </label>
+//     </div>
+//   )
+// }
+
+// const App = () => {
+//   const [cores, setCores] = React.useState(['']);
+
+//   function handleChange({ target }) {
+//     if (target.checked) {
+//       setCores([...cores, target.value]);
+//     } else {
+//       setCores(cores.filter((cor) => cor !== target.value));
+//     }
+//   }
+
+//   return (
+//     <div>
+//       <label>
+//         <input checked={cores.includes('azul')} value="azul" onChange={handleChange} type="checkbox" />
+//         Azul
+//       </label>
+//       <label>
+//         <input checked={cores.includes('vermelho')} value="vermelho" onChange={handleChange} type="checkbox" />
+//         Vermelho
+//       </label>
+//     </div>
+//   );
+// };
+
+// const App = () => {
+//   const [nome, setNome] = React.useState('');
+//   const [email, setEmail] = React.useState('');
+
+//   return (
+//     <form>
+//       <Input value={nome} setValue={setNome} id="nome" label="Nome" />
+//       <Input value={email} setValue={setEmail} id="email" label="Email" required/>
+//     </form>
+//   );
+// };
+
+// const App = () => {
+//   const [produtos, setProdutos] = React.useState('');
+
+//   return (
+//     <form>
+//       <Select
+//         setValue={setProdutos}
+//         value={produtos}
+//         options={['Notebook', 'Tablet', 'Macbook']}
+//       />
+//     </form>
+//   );
+// };
+
+// const App = () => {
+//   const [value, setValue] = React.useState('');
+
+//   return (
+//     <form action="">
+//       <Radio
+//         setValue={setValue}
+//         value={value}
+//         options={['Smartphone', 'Macbook', 'Tablet']}
+//       />
+//     </form>
+//   );
+// };
+
+// const App = () => {
+// const [box, setBox] = React.useState([])
+// const [termos, setTermos] = React.useState([])
+
+//   return (
+//     <>
+//       <form action="">
+//         <Checkbox options={['Aceito os termos']} value={termos} setValue={setTermos} />
+//         <Checkbox value={box} setValue={setBox} options={['Azul', 'Vermelho', 'Rosa', 'Verde']} />
+//       </form>
+//     </>
+//   );
+// };
+
+// const options = [
+//   { name: 'Azul', cor: '#0000FF' },
+//   { name: 'Verde', cor: '	#7CFC00' },
+//   { name: 'Vermelho', cor: '#FF0000' },
+//   { name: 'Preto', cor: '#000000' },
+// ];
+
+// const App = () => {
+//   const [color, setColor] = React.useState([]);
+
+//   return (
+//     <>
+//       <Colors options={options} value={color} setValue={setColor} />
+//     </>
+//   );
+// };
+
 const App = () => {
   return (
     <>
-      <UserFetch/>
+      <div>Coe</div>
     </>
   );
 };
