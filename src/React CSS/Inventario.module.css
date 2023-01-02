@@ -1,0 +1,12 @@
+.titulo {
+  color: #43c;
+}
+.preco {
+  font-weight: bold;
+}
+.comprar{
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// import Perguntas from './Desafio Formulario/Perguntas';
 // import { Validacao } from './Desafio Pratica/Validacao';
 // import Colors from './Desafio Pratica/Colors';
 // import Checkbox from './Componentes/Formulario/Checkbox';
@@ -1060,28 +1061,85 @@ import React from 'react';
 //
 //
 
-import Quest1 from './Desafio Formulario/Quest1';
-import Quest2 from './Desafio Formulario/Quest2';
-import Quest3 from './Desafio Formulario/Quest3';
-import Quest4 from './Desafio Formulario/Quest4';
-import { ResultStorage } from './Desafio Formulario/FormContext';
-import Resposta from './Desafio Formulario/Resposta';
+// import Quest1 from './Desafio Formulario/Quest1';
+// import Quest2 from './Desafio Formulario/Quest2';
+// import Quest3 from './Desafio Formulario/Quest3';
+// import Quest4 from './Desafio Formulario/Quest4';
+// import { ResultStorage } from './Desafio Formulario/FormContext';
+// import Resposta from './Desafio Formulario/Resposta';
+
+// const App = () => {
+//   let Pagina = Quest1;
+//   const { pathname } = window.location;
+
+//   if (pathname === '/p2') Pagina = Quest2;
+//   else if (pathname === '/p3') Pagina = Quest3;
+//   else if (pathname === '/p4') Pagina = Quest4;
+//   else if (pathname === '/resposta') Pagina = Resposta
+//   else Pagina = Quest1;
+
+//   return (
+//     <>
+//       <ResultStorage>
+//         <Pagina />
+//       </ResultStorage>
+//     </>
+//   );
+// };
+
+// Form Desafio
+// import { ResultStorage } from './Desafio Formulario/FormContext';
+
+// const App = () => {
+//   return (
+//     <>
+//       <ResultStorage>
+//         <Perguntas />
+//       </ResultStorage>
+//     </>
+//   );
+// };
+//
+
+// import Inventario from './React CSS/Inventario';
+
+// const App = () => {
+//   return (
+//     <>
+//       <Inventario/>
+//     </>
+//   );
+// };
+
+import { Slide } from './React CSS/Slide';
+
+const slides = [
+  {
+    id: 'slide1',
+    text: 'Slide 1'
+  },
+  {
+    id: 'slide2',
+    text: 'Slide 2'
+  },
+  {
+    id: 'slide3',
+    text: 'Slide 3'
+  },
+  {
+    id: 'slide4',
+    text: 'Slide 4'
+  },
+  {
+    id: 'slide5',
+    text: 'Slide 5'
+  }
+]
 
 const App = () => {
-  let Pagina = Quest1;
-  const { pathname } = window.location;
-
-  if (pathname === '/p2') Pagina = Quest2;
-  else if (pathname === '/p3') Pagina = Quest3;
-  else if (pathname === '/p4') Pagina = Quest4;
-  else if (pathname === '/resposta') Pagina = Resposta
-  else Pagina = Quest1;
-
   return (
     <>
-      <ResultStorage>
-        <Pagina />
-      </ResultStorage>
+      <Slide slide={slides}/>
     </>
   );
 };
