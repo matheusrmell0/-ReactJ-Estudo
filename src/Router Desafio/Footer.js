@@ -5,4 +5,4 @@ const Footer = () => {
   return <span className={style.footer}>Alguns direitos reservados.</span>;
 };
 
-export default Footer;
+export default React.memo(Footer);

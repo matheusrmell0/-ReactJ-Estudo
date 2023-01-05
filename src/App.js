@@ -1193,32 +1193,73 @@ import React from 'react';
 // };
 
 //
+// Lojinha
+// import Produtos from './Router Desafio/Produtos';
+// import { Route, Routes, BrowserRouter } from 'react-router-dom';
+// import Contato from './Router Desafio/Contato';
+// import Header from './Router Desafio/Header';
+// import Footer from './Router Desafio/Footer';
+// import { GlobaltStorage } from './Router Desafio/Storage/Global';
+// import ProdutoLista from './Router Desafio/ProdutoLista';
+// import './Router Desafio/Storage/App.css';
 
-import Produtos from './Router Desafio/Produtos';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import Contato from './Router Desafio/Contato';
-import Header from './Router Desafio/Header';
-import Footer from './Router Desafio/Footer';
-import { GlobaltStorage } from './Router Desafio/Storage/Global';
-import ProdutoLista from './Router Desafio/ProdutoLista';
-import './Router Desafio/Storage/App.css';
+// const App = () => {
+//   return (
+//     <>
+//       <GlobaltStorage>
+//         <BrowserRouter>
+//           <Header />
+//             <Routes>
+//               <Route path="/" element={<Produtos />} />
+//               <Route path="contato" element={<Contato />} />
+//               <Route path="produto/:id" element={<ProdutoLista />} />
+//             </Routes>
+//           <Footer />
+//         </BrowserRouter>
+//       </GlobaltStorage>
+//     </>
+//   );
+// };
+
+// import Button from './Mais React/Button';
+// const App = () => {
+//   return (
+//     <>
+//       <Button
+//         handleclick={() => console.log('Declarei')}
+//         boolean={false}
+//         width={200}
+//       >
+//         Clique aqui
+//       </Button>
+//     </>
+//   );
+// };
+
+// import Reducer from './Mais React/Reducer';
+// const App = () => {
+//   return (
+//     <>
+//       <Reducer />
+//     </>
+//   );
+// };
+
+// import Classe from './Mais React/Classe';
+// const App = () => {
+//   const [ativar, setAtivar] = React.useState(true);
+//   return (
+//     <>
+//       {ativar && <Classe title='Teste de criação de classe no React' />}
+//       <button style={{ marginTop: '10px' }} onClick={() => setAtivar(!ativar)}>
+//         Toogle
+//       </button>
+//     </>
+//   );
+// };
 
 const App = () => {
-  return (
-    <>
-      <GlobaltStorage>
-        <BrowserRouter>
-          <Header />
-            <Routes>
-              <Route path="/" element={<Produtos />} />
-              <Route path="contato" element={<Contato />} />
-              <Route path="produto/:id" element={<ProdutoLista />} />
-            </Routes>
-          <Footer />
-        </BrowserRouter>
-      </GlobaltStorage>
-    </>
-  );
+  return <>Finished for now (❁´◡`❁)</>;
 };
 
 export default App;
