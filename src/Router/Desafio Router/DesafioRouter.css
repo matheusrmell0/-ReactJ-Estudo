@@ -1,0 +1,155 @@
+* {
+  font-family: monospace;
+}
+
+.container {
+  padding-top: 10px;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.contatoImage {
+  width: 500px;
+  height: 700px;
+  background-image: url('./img/contato.jpg');
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.contatoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+}
+
+.produtoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contatoDescricao h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.contatoDescricao p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contatoDescricao p::before {
+  margin-top: 10px;
+  content: '';
+  width: 20px;
+  height: 3px;
+  background: #e7e7e7;
+  display: block;
+}
+
+.contatoDescricao {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+.nomeProduto {
+  margin-bottom: 30px;
+}
+
+.headerNav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.navlink {
+  background: #e7e7e7;
+  padding: 12px 17px;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.listProdutos {
+  height: 900px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 960px;
+  gap: 25px;
+}
+
+.produtosTela {
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.fotoProduto {
+  cursor: pointer;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.fotoProduto:hover {
+  animation: scalefrom 0.3s forwards;
+}
+@keyframes scalefrom {
+  to {
+    scale: 1.05;
+  }
+}
+
+.produtoImg {
+  width: 400px;
+  height: 600px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.produtoPreco {
+  background: lightgreen;
+  width: max-content;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.produtoDescricao {
+  font-size: 1.5rem;
+}
+
+.produtoTitle {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.animeLeft{
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeft .4s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+.loading{ 
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  border-right-color: transparent;
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}

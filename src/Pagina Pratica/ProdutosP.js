@@ -11,6 +11,7 @@ const produtos = [
 const ProdutosP = () => {
   return (
     <section>
+      <h1>Teste</h1>
       <Titulo text="Produtos" />
       {produtos.map((produtoSpecs) => (
         <ProdutoP key={produtoSpecs.nome} {...produtoSpecs} />

@@ -1111,35 +1111,112 @@ import React from 'react';
 //   );
 // };
 
-import { Slide } from './React CSS/Slide';
+// import { Slide } from './React CSS/Slide';
 
-const slides = [
-  {
-    id: 'slide1',
-    text: 'Slide 1'
-  },
-  {
-    id: 'slide2',
-    text: 'Slide 2'
-  },
-  {
-    id: 'slide3',
-    text: 'Slide 3'
-  },
-  {
-    id: 'slide4',
-    text: 'Slide 4'
-  },
-  {
-    id: 'slide5',
-    text: 'Slide 5'
-  }
-]
+// const slides = [
+//   {
+//     id: 'slide1',
+//     text: 'Slide 1'
+//   },
+//   {
+//     id: 'slide2',
+//     text: 'Slide 2'
+//   },
+//   {
+//     id: 'slide3',
+//     text: 'Slide 3'
+//   },
+//   {
+//     id: 'slide4',
+//     text: 'Slide 4'
+//   },
+//   {
+//     id: 'slide5',
+//     text: 'Slide 5'
+//   }
+// ]
+
+// const App = () => {
+//   return (
+//     <>
+//       <Slide slide={slides}/>
+//     </>
+//   );
+// };
+
+// Router
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import HomeP from './Pagina Pratica/HomeP';
+// import HeaderP from './Pagina Pratica/HeaderP';
+// import Footer from './First Aula/Footer';
+// import SobreR from './Router/SobreR';
+// import Login from './Router/Login';
+// import ProdutoR from './Router/ProdutoR';
+
+// const App = () => {
+//   return (
+//     <>
+//       <BrowserRouter>
+//         <HeaderP />
+//         <Routes>
+//           <Route path="/" element={<HomeP />} />
+//           <Route path="sobre" element={<SobreR />} />
+//           <Route path="login" element={ <Login/>} />
+//           <Route path="produto/:id/*" element={<ProdutoR/>} />
+//         </Routes>
+//         <Footer />
+//       </BrowserRouter>
+//     </>
+//   );
+// };
+
+// // Desafio Router
+// import Home from './Router/Desafio Router/Home';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import Header from './Router/Desafio Router/Header';
+// import Contato from './Router/Desafio Router/Contato';
+// import LojaProdutos from './Router/Desafio Router/LojaProdutos';
+
+// const App = () => {
+//   return (
+//     <>
+//       <BrowserRouter>
+//         <Header />
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="contato" element={<Contato />} />
+//           <Route path="produto/:id" element={<LojaProdutos />} />
+//         </Routes>
+//       </BrowserRouter>
+//     </>
+//   );
+// };
+
+//
+
+import Produtos from './Router Desafio/Produtos';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Contato from './Router Desafio/Contato';
+import Header from './Router Desafio/Header';
+import Footer from './Router Desafio/Footer';
+import { GlobaltStorage } from './Router Desafio/Storage/Global';
+import ProdutoLista from './Router Desafio/ProdutoLista';
+import './Router Desafio/Storage/App.css';
 
 const App = () => {
   return (
     <>
-      <Slide slide={slides}/>
+      <GlobaltStorage>
+        <BrowserRouter>
+          <Header />
+            <Routes>
+              <Route path="/" element={<Produtos />} />
+              <Route path="contato" element={<Contato />} />
+              <Route path="produto/:id" element={<ProdutoLista />} />
+            </Routes>
+          <Footer />
+        </BrowserRouter>
+      </GlobaltStorage>
     </>
   );
 };

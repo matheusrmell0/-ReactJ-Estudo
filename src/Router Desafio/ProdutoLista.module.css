@@ -1,0 +1,36 @@
+.produto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.produto img {
+  margin-bottom: 2rem;
+}
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button{
+  font-weight: bold;
+  background: #ddd;
+  color: #010101;
+  border-radius: 4px;
+}
+
+.preco {
+  padding: 0.5rem 1rem;
+  background: #ddd;
+  color: #010101;
+  border-radius: 4px;
+}
+
+.descricao {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}

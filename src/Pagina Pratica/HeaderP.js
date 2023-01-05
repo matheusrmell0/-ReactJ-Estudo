@@ -1,16 +1,34 @@
-import React from 'react'
+import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const HeaderP = () => {
-  return (
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/produtos">Produtos</a></li>
-        </ul>
-      </nav>
-    </header>
-  )
-}
+  const activeStyle = {
+    color: 'red',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+  };
 
-export default HeaderP
+  const location = useLocation();
+
+  React.useEffect(() => {
+    console.log('Google Analytics');
+  }, [location]);
+
+  return (
+    <nav>
+      <NavLink activeStyle={activeStyle} to="/" end>
+        Home
+      </NavLink>{' '}
+      /{' '}
+      <NavLink activeStyle={activeStyle} to="sobre" end>
+        Sobre
+      </NavLink>{' '}
+      /{' '}
+      <NavLink activeStyle={activeStyle} to="login" end>
+        Login
+      </NavLink>{' '}
+    </nav>
+  );
+};
+
+export default HeaderP;
