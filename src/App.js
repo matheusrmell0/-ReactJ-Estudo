@@ -1258,8 +1258,16 @@ import React from 'react';
 //   );
 // };
 
+// import Api from './Brincando com API/Api';
+// const App = () => {
+//   return (
+//     <>
+//       <Api />
+//     </>
+//   );
+// };
+
 const App = () => {
   return <>Finished for now (❁´◡`❁)</>;
 };
-
 export default App;
